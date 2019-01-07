@@ -5,6 +5,7 @@
     <p v-once>{{ titulo }}</p>
     <p>{{ saudacao() }}</p>
     <a v-bind:href="link">google</a>
+    <p v-html="linkHTML"></p>
 </div>
 
 <script>
@@ -12,7 +13,8 @@
         el:"#app",
         data: {
             titulo : "A HAa, to no helipa..",
-            link : "http://www.google.com"
+            link : "http://www.google.com",
+            linkHTML : `<a href=http://www.google.com">Google</a>`
         },
         methods : {
             saudacao : function(){
