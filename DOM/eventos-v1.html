@@ -1,14 +1,21 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
+    <p v-once>{{ contador }}</p>
     <p>{{ contador }}</p>
+    <button v-on:click="soma">Somar 1</button>
 </div>
 
 <script>
     new Vue({
         el:"#app",
         data: {
-            contador : "A HAa, to no helipa.."
+            contador : 0
+        },
+        methods : {
+            soma(){
+                this.contador++;
+            }
         }
     })
 </script>
