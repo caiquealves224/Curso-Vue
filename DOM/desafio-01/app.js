@@ -8,7 +8,7 @@ new Vue ({
 
     methods : {
         random(){
-            return Math.random() * 1
+            return Math.random()
         }
     }
 })
