@@ -10,6 +10,7 @@
         data (dica: event.target.value) -->
     <div>
         <input v-on:keydown="setValor" type="text">
+        <!-- <input v-on:keydown="valor = $event.target.value" type="text"> -->
         <p>{{ valor }}</p>
     </div>
     
@@ -17,6 +18,7 @@
         quando a tecla for ENTER -->
     <div>
         <input v-on:keydown.enter="setValor" type="text">
+        <!-- <input v-on:keydown.enter="valor = $event.target.value" type="text"> -->
         <p>{{ valor }}</p>
     </div>
 </div>
