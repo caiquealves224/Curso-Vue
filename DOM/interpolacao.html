@@ -1,8 +1,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
-    <p v-once>{{ contador }}</p>
-    <p>{{ contador }}</p>
+    <p>{{ contador * 2 }}</p>
+    <p>{{ contador > 10 ? 'Maior do que 10 ' : 'Menor do que 10' }}</p>
     <button v-on:click="soma($event)">Somar 1</button>
    </div>
 
