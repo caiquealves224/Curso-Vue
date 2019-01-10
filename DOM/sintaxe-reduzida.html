@@ -3,7 +3,9 @@
 <div id="app">
     <p v-once>{{ contador }}</p>
     <p>{{ contador }}</p>
-    <button v-on:click="soma">Somar 1</button>
+    <button @click="soma">Somar 1</button>
+    <hr>
+    <input :value="contador">
 </div>
 
 <script>
