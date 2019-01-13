@@ -4,15 +4,26 @@
             display: flex;
             justify-content: space-around;
         }
+
         .demo{
             width: 100px;
             height: 100px;
             background-color: gray;
         }
+
+        .blue{
+            background-color: blue;
+        }
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
     </style>
 
 <div id="app">
-    <div class="demo"></div>
+    <div class="demo" :class="{blue : aplicarBlue}" @click="aplicarBlue = !aplicarBlue"></div>
     <div class="demo"></div>
     <div class="demo"></div>
 </div>
@@ -22,7 +33,7 @@
         el: '#app',
 
         data : {
-            
+            aplicarBlue: ""
         }
     });
 </script>
