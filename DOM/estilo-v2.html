@@ -25,7 +25,7 @@
 <div id="app">
     <div class="demo"></div>
     <div class="demo"></div>
-    <div class="demo"></div>
+    <div class="demo" :class="estilo1" @click="aplicarBlue = !aplicarBlue"></div>
 </div>
 
 <script>
@@ -33,7 +33,14 @@
         el: '#app',
 
         data : {
-            
+            aplicarBlue: false
+        },
+        computed : {
+            estilo1 (){
+                return { 
+                    yellow : this.aplicarBlue
+                }
+            }
         }
     });
 </script>
