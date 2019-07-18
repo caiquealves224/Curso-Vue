@@ -12,7 +12,7 @@
     </button>
 
     <p>Contador: {{ contador }} | {{ contador2}}</p>
-    <p>Resultado: {{ resultado }}</p>
+    <p>Resultado: {{ resultado() }}</p>
 </div>
 
 <script>
@@ -24,11 +24,11 @@
         },
 
         computed : {
-            resultado(){
-                console.log("metodo resultado")
-                return this.contador < 5 ?
-                 'Menor que cinco' : 'Maior que 5'
-            }
+            // resultado(){
+            //     console.log("metodo resultado")
+            //     return this.contador < 5 ?
+            //      'Menor que cinco' : 'Maior que 5'
+            // }
         },
 
         methods: {
@@ -38,10 +38,11 @@
             diminuir(){
                 this.contador--;
             },
-            // resultado(){
-            //     return this.contador < 5 ?
-            //      'Menor que cinco' : 'Maior que 5'
-            // }
+            resultado(){
+                console.log("metodo resultado");
+                return this.contador < 5 ?
+                 'Menor que cinco' : 'Maior que 5'
+            }
         },
     })
 </script>
